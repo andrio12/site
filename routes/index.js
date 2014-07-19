@@ -1,9 +1,35 @@
-var express = require('express');
-var router = express.Router();
+exports.index = function(req, res) {
+  res.render('index', {
+      title: 'NBA Ísland - Forsíða'
+  });
+}
 
-/* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
-});
+exports.frettir = function(req, res) {
+    res.render('frettir', {
+        title: 'NBA Ísland - Fréttir'
+    });
+}
 
-module.exports = router;
+exports.leikmenn_og_lid = function(req, res) {
+    res.render('index', {
+        title: 'Helstu Leikmenn og Lið'
+    });
+}
+
+exports.aftur_til_fortidar = function(req, res) {
+    res.render('index', {
+        title: 'Aftur til fortíðar'
+    });
+}
+
+exports.baekur_og_heimildamyndir = function(req, res) {
+    res.render('index', {
+        title: 'Bækur og Heimildamyndir'
+    });
+}
+
+exports.hvad_ef = function(req, res) {
+    res.render('index', {
+        title: 'Hvað ef?'
+    });
+}

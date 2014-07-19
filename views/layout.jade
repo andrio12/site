@@ -1,7 +1,40 @@
 doctype html
 html
   head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="developer" content="Andri Ólafsson")
+    meta(name="content-author" content="Sigurður Einar Einarsson")
     title= title
+    script(src="/javascripts/jquery-2.1.1.min.js")
+    script(src="/javascripts/bootstrap.min.js")
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    section.navbar.navbar-default.navbar-fixed-top
+      div.container
+        div.navbar-header
+          a(href="/" class="navbar-brand") NBA Ísland
+          button.navbar-toggle(type="button" data-toggle="collapse" data-target="#navbar-main")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        div.navbar-collapse.collapse(id="navbar-main")
+          ul.nav.navbar-nav
+            li
+              a(href="/frettir") Fréttir
+            li
+              a(href="/leikmenn_og_lid") Leikmenn og Lið
+            li
+              a(href="/aftur_til_fortidar") Aftur til fortíðar
+            li
+              a(href="/baekur_og_heimildamyndir") Bækur og Heimildamyndir
+            li
+              a(href="/hvad_ef") Hvað ef?
+    div.container.wrapper
+      div.row
+        section.content.col-md-9
+          block content
+        aside.ads.col-md-3
+          include adspace

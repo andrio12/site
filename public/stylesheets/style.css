@@ -1,8 +1,52 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+h2, h3{
+    margin-top: 10px;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.wrapper{
+
+}
+
+/** ads **/
+
+.ads{
+
+}
+
+.ad{
+    height:250px;
+    width: 250px;
+    border: 1px solid #f2f2f2;
+    background: #ffffff;
+    margin: 20px auto;
+}
+
+/** articles **/
+
+.panel-heading:hover{
+    background-color: #3e444c;
+}
+
+.panel-body img{
+    max-width: 260px;
+    padding: 5px;
+    padding-bottom:20px;
+    background: #ddd;
+    margin-bottom:5px;
+}
+
+.float-right{
+    float:right;
+    margin-left: 10px;
+}
+.float-left{
+    float:left;
+    margin-right: 10px;
 }
